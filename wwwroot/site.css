@@ -1,5 +1,75 @@
-﻿.diaLittle {
-    width:50px;
-    height:50px;
-    background-color:black;
+﻿body {
+    background-color: #96BDEC;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    padding: 13px 5px;
+}
+
+.diaLittle {
+    width: 50px;
+    height: 50px;
+    border-radius: 11px;
+    margin: 13px;
+}
+
+    .diaLittle img {
+        width: 50px;
+        height: 50px;
+    }
+
+.qr {
+    width: 25px;
+    height: 25px;
+    float: left;
+    border: 1px solid black;
+    margin: 19px 13px 0px auto;
+}
+
+.card {
+    width: auto;
+    height: 600px;
+    margin: 19px;
+    background-color: #FDF4A1;
+    border-radius: 7px;
+    font-size: 20px;
+    font-weight: bold;
+    /*padding: 20px 0 0 15px;*/
+}
+
+    .card img {
+        width: 196px;
+        height: 30px;
+        margin: 20px 0 0 15px;
+    }
+
+    .card marquee {
+        background: rgb(107,136,246);
+        background: linear-gradient(90deg, rgba(107,136,246,1) 0%, rgba(188,251,230,1) 35%);
+        font-weight: 500;
+        font-size: medium;
+        margin-top: 200px;
+    }
+
+.ident {
+    margin: 10px 0 0 13px;
+    font-weight: 700;
+}
+
+.card .ident p {
+    margin:0px;
+}
+
+.edocOne {
+    margin: 20px 0px 0px 15px;
+    font-weight: 500;
+    font-size: medium;
+}
+
+.edocTwo {
+    margin: 0px 0px 0px 15px;
+    font-weight: 500;
+    font-size: medium;
 }
