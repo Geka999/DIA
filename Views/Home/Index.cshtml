@@ -1,4 +1,5 @@
 ﻿<div ng-controller="diaController">
+    <div ng-class="blur"></div>
     <div class="flex-row">
         <div class="diaLittle">
             <img src="~/pictures/dia.svg" />
@@ -40,7 +41,18 @@
             </div>
         </div>
     </div>
-    <div class="expandCardPropery cardPropertyBottom" ng-style="cardPropertyHeight"></div>
+    <div class="expandCardPropery cardPropertyBottom" ng-style="cardPropertyHeight">        
+        <p class="cardTextProp">Повна iнформацiя</p>
+        <hr class="hrCenter" />
+        <p class="cardTextProp">Код для перевiрки</p>
+        <hr class="hrCenter" />
+        <p class="cardTextProp">Змiнити порядок вiдображення</p>
+        <hr class="hrCenter" />
+        <p class="cardTextProp">Питання та вiдповiдi</p>
+        <hr class="hrCenter" />
+        <p class="cardTextProp" ng-click="showCardProperty($event)">X</p>
+    </div>
+
 </div>
 
 

@@ -116,6 +116,7 @@
     height: 100%;
     transform-style: preserve-3d;
     transition: all 0.3s linear;
+
 }
 
 /*#container:hover #innercontainer {
@@ -124,7 +125,6 @@
 }*/
 .rotate {
     transform: rotateY(180deg);
-    box-shadow: -5px 5px 5px #aaa;
 }
 
 
@@ -159,7 +159,7 @@
     /*width: 100px;*/
     /*height: 100px;*/
     background: white;
-    transition: all 1.0s linear;
+    transition: all 0.2s linear;
 }
 
 .cardPropertyBottom {
@@ -169,4 +169,33 @@
     width: 96%;
     height: 20%;
     border-radius: 5px 5px 0 0;
+    z-index:3;
+    text-align:center;
+}
+
+.blur {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    height: 100%;
+    width: 100%;
+    position:absolute;
+    z-index:2;
+}
+
+.noBlur {
+    background: none;
+    backdrop-filter: none;
+    height: 0%;
+    width: 0%;
+    z-index:0;
+}
+
+.hrCenter {
+    width: 80%;
+    margin:0 10% 0 10%;
+}
+
+.cardTextProp {
+    margin-top: 5%;
+    font-weight:600;
 }
