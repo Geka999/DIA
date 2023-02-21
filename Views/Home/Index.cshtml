@@ -1,24 +1,54 @@
-﻿<div class="flex-row">
-    <div class="diaLittle">
-        <img src="~/pictures/dia.svg" />
+﻿<div ng-controller="diaController">
+    <div class="flex-row">
+        <div class="diaLittle">
+            <img src="~/pictures/dia.svg" />
+        </div>
+        <div class="qrTop">
+            <img src="~/pictures/qr_top.png" />
+        </div>
     </div>
-    <div class="qr">QR</div>
-</div>
-<div class="card">
-    <img src="~/pictures/edoc_header.png" />
-    <p class="edocOne">Дата народження:</p>
-    <p class="edocTwo">01.01.1999</p>
-    <p class="edocOne">РНОКПП:</p>
-    <p class="edocTwo">1255129865</p>
-    <marquee behavior="scroll" direction="left">
-        Ой у лузі червона калина похилилася,
-        Чогось наша славна Україна зажурилася.
-        А ми тую червону калину підіймемо,
-        А ми нашу славну Україну, гей, гей, розвеселимо!  Документ діє під час воєнного стану.
-    </marquee>
-    <div class="ident">
-        <p>Говерла</p>
-        <p>Півень</p>
-        <p>Бандерович</p>
+    <div id="container">
+        <div id="innercontainer" ng-click="cardClick()" ng-class="class">
+            <div class="card face">            
+                <img class="edocHeade" src="~/pictures/edoc_header.png" />
+                <p class="edocOne">Дата народження:</p>
+                <p class="edocTwo">01.01.1999</p>
+                <p class="edocOne">РНОКПП:</p>
+                <p class="edocTwo">1255129865</p>
+                <div>
+                    <marquee behavior="scroll" direction="left">
+                        Ой у лузі червона калина похилилася,
+                        Чогось наша славна Україна зажурилася.
+                        А ми тую червону калину підіймемо,
+                        А ми нашу славну Україну, гей, гей, розвеселимо!  Документ діє під час воєнного стану.
+                    </marquee>
+                </div>
+                <div class="flex-row">
+                    <div class="ident">
+                        <p>Говерла</p>
+                        <p>Півень</p>
+                        <p>Бандерович</p>
+                    </div>
+                    <div class="cardBtn">
+                        <p>...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card back face">            
+                <img class="qrImg" src="~/pictures/qr.png" />
+            </div>
+        </div>
     </div>
 </div>
+
+
+@*<div id="container">
+    <div id="innercontainer">
+        <div class="front face">
+            front
+        </div>
+        <div class="back face">
+            back
+        </div>
+    </div>
+</div>*@

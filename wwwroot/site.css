@@ -20,18 +20,23 @@
         height: 50px;
     }
 
-.qr {
+
+
+.qrTop {
+    float: left;
     width: 25px;
     height: 25px;
-    float: left;
-    border: 1px solid black;
     margin: 19px 13px 0px auto;
 }
+    .qrTop img {
+        width: 25px;
+        height: 25px;
+    }
 
 .card {
     width: auto;
-    height: 600px;
-    margin: 19px;
+    height: 420px;
+    /*margin: 19px;*/
     background-color: #FDF4A1;
     border-radius: 7px;
     font-size: 20px;
@@ -39,7 +44,7 @@
     /*padding: 20px 0 0 15px;*/
 }
 
-    .card img {
+    .card .edocHeade {
         width: 196px;
         height: 30px;
         margin: 20px 0 0 15px;
@@ -50,16 +55,22 @@
         background: linear-gradient(90deg, rgba(107,136,246,1) 0%, rgba(188,251,230,1) 35%);
         font-weight: 500;
         font-size: medium;
-        margin-top: 200px;
+        /*margin-top: 200px;*/
+        margin-top:25%;
+        
     }
 
 .ident {
-    margin: 10px 0 0 13px;
+    margin: 0px 0 0 13px;
     font-weight: 700;
 }
 
 .card .ident p {
     margin:0px;
+}
+
+.card .flex-row .ident p {
+    
 }
 
 .edocOne {
@@ -72,4 +83,74 @@
     margin: 0px 0px 0px 15px;
     font-weight: 500;
     font-size: medium;
+}
+
+.cardBtn {
+    width: 30px;
+    height: 30px;
+    border: 2px solid;
+    margin: 65px 0 0 137px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+    .cardBtn p {
+        margin-top:-7px;
+    }
+
+
+
+
+
+#container {
+    position: relative;
+    /*margin: 10px auto;*/
+    /*width: 450px;*/
+    height: 281px;
+    z-index: 1;
+    margin: 19px;
+}
+
+#innercontainer {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.3s linear;
+}
+
+/*#container:hover #innercontainer {
+    transform: rotateY(180deg);
+    box-shadow: -5px 5px 5px #aaa;
+}*/
+.rotate {
+    transform: rotateY(180deg);
+    box-shadow: -5px 5px 5px #aaa;
+}
+
+
+.face {
+    position: absolute;
+    width: 100%;
+    height: 420px;
+    backface-visibility: hidden;
+}
+
+    .face.back {
+        display: block;
+        transform: rotateY(180deg);
+        box-sizing: border-box;
+        /*padding: 10px;*/
+        /*color: white;*/
+        /*text-align: center;*/
+        /*background-color: blue;*/
+    }
+
+.front {
+    /*background-color: red;*/
+}
+
+.qrImg {
+    margin:33% 10%;
+    width: 80%;
+    height: 57%;
 }
