@@ -9,8 +9,9 @@
     </div>
     <div id="container">
         <div id="innercontainer" ng-click="cardClick()" ng-class="class">
-            <div class="card face">            
-                <img class="edocHeade" src="~/pictures/edoc_header.png" />
+            <div class="card face">
+
+                <img class="edocHeader" src="~/pictures/edoc_header.png" />
                 <p class="edocOne">Дата народження:</p>
                 <p class="edocTwo">01.01.1999</p>
                 <p class="edocOne">РНОКПП:</p>
@@ -29,16 +30,17 @@
                         <p>Півень</p>
                         <p>Бандерович</p>
                     </div>
-                    <div class="cardBtn">
+                    <div class="cardBtn" ng-click="showCardProperty($event)">
                         <p>...</p>
                     </div>
                 </div>
             </div>
-            <div class="card back face">            
+            <div class="card back face">
                 <img class="qrImg" src="~/pictures/qr.png" />
             </div>
         </div>
     </div>
+    <div class="expandCardPropery cardPropertyBottom" ng-style="cardPropertyHeight"></div>
 </div>
 
 
