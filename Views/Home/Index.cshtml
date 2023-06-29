@@ -1,5 +1,4 @@
 ﻿<div ng-controller="diaController">
-
     <div ng-class="blur"></div>
     <div class="flex-row">
         <div class="diaLittle">
@@ -9,46 +8,98 @@
             <img src="~/pictures/qr_top.png" />
         </div>
     </div>
-    <div id="container">
-        <div id="innercontainer" ng-click="cardClick()" ng-class="class">
-            <div class="card face">
+    <div class="slide-container swiper">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div>
+                        <div class="container">
+                            <div class="innercontainer" ng-click="cardClick()" ng-class="class">
+                                <div class="card1 face">
+                                    <img class="edocHeader" src="~/pictures/edoc_header.png" />
+                                    <div>
+                                        <img class="mainPhoto" src="~/pictures/MainPhoto.jpg" />
+                                        <div class="lefData">
+                                            <p class="edocOne">Дата народження:</p>
+                                            <p class="edocTwo">01.01.1999</p>
+                                            <p class="edocOne">РНОКПП:</p>
+                                            <p class="edocTwo">1255129865</p>
+                                        </div>
+                                    </div>
 
-                <img class="edocHeader" src="~/pictures/edoc_header.png" />
-                <div>
-                    <img class="mainPhoto" src="~/pictures/MainPhoto.jpg" />
-                    <div class="lefData">
-                        <p class="edocOne">Дата народження:</p>
-                        <p class="edocTwo">01.01.1999</p>
-                        <p class="edocOne">РНОКПП:</p>
-                        <p class="edocTwo">1255129865</p>
+                                    <div>
+                                        <marquee behavior="scroll" direction="left">
+                                            Ой у лузі червона калина похилилася,
+                                            Чогось наша славна Україна зажурилася.
+                                            А ми тую червону калину підіймемо,
+                                            А ми нашу славну Україну, гей, гей, розвеселимо!  Документ діє під час воєнного стану.
+                                        </marquee>
+                                    </div>
+                                    <div class="flex-row">
+                                        <div class="ident">
+                                            <p>Говерла</p>
+                                            <p>Півень</p>
+                                            <p>Бандерович</p>
+                                        </div>
+                                        <div class="cardBtn" ng-click="showCardProperty($event)">
+                                            <p>...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card1 back face">
+                                    <img class="qrImg" src="~/pictures/qr.png" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div>
+                        <div class="container">
+                            <div class="innercontainer" ng-click="cardClick()" ng-class="class">
+                                <div class="card1 face">
+                                    <img class="edocHeader" src="~/pictures/edoc_header.png" />
+                                    <div>
+                                        <img class="mainPhoto" src="~/pictures/MainPhoto.jpg" />
+                                        <div class="lefData">
+                                            <p class="edocOne">Дата народження:</p>
+                                            <p class="edocTwo">01.01.1999</p>
+                                            <p class="edocOne">РНОКПП:</p>
+                                            <p class="edocTwo">1255129865</p>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <marquee behavior="scroll" direction="left">
+                                            Ой у лузі червона калина похилилася,
+                                            Чогось наша славна Україна зажурилася.
+                                            А ми тую червону калину підіймемо,
+                                            А ми нашу славну Україну, гей, гей, розвеселимо!  Документ діє під час воєнного стану.
+                                        </marquee>
+                                    </div>
+                                    <div class="flex-row">
+                                        <div class="ident">
+                                            <p>Говерла</p>
+                                            <p>Півень</p>
+                                            <p>Бандерович</p>
+                                        </div>
+                                        <div class="cardBtn" ng-click="showCardProperty($event)">
+                                            <p>...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card1 back face">
+                                    <img class="qrImg" src="~/pictures/qr.png" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div>
-                    <marquee behavior="scroll" direction="left">
-                        Ой у лузі червона калина похилилася,
-                        Чогось наша славна Україна зажурилася.
-                        А ми тую червону калину підіймемо,
-                        А ми нашу славну Україну, гей, гей, розвеселимо!  Документ діє під час воєнного стану.
-                    </marquee>
-                </div>
-                <div class="flex-row">
-                    <div class="ident">
-                        <p>Говерла</p>
-                        <p>Півень</p>
-                        <p>Бандерович</p>
-                    </div>
-                    <div class="cardBtn" ng-click="showCardProperty($event)">
-                        <p>...</p>
-                    </div>
-                </div>
-            </div>
-            <div class="card back face">
-                <img class="qrImg" src="~/pictures/qr.png" />
             </div>
         </div>
+        <div class="swiper-pagination"></div>
     </div>
-
     <div class="expandCardPropery cardPropertyBottom" ng-style="cardPropertyHeight">
         <p class="cardTextProp" ng-click="showCardProperty2()">Повна iнформацiя</p>
         <hr class="hrCenter" />
@@ -75,12 +126,6 @@
                 <span>Бандерович</span><br />
                 <span class="nameSurnameSpan">Piven Goverla</span>
             </div>
-            @*<div class="middleBold">
-            <span class="marginInfo1">Стать:</span>
-            <span class="marginInfo2">Ч</span><br/>
-            <span class="marginInfo1">Sex</span>
-            <span class="marginInfo2">M</span>
-            </div>*@
             <table class="middleBold marginInfo1">
                 <tr>
                     <th class="tableCellWidth">Стать:</th>
@@ -113,7 +158,7 @@
             </table>
             <table class="middleBold marginInfo1">
                 <tr>
-                    <th class="tableCellWidth">Документ, що <br/>посвідчує особу:</th>
+                    <th class="tableCellWidth">Документ, що <br />посвідчує особу:</th>
                     <th>Паспорт громадянина України</th>
                 </tr>
             </table>
@@ -127,18 +172,6 @@
             <span class="middleBold marginBank">Гора говрла печера №5</span>
         </div>
     </div>
-    <div class="hideCardData"></div>
-
 </div>
 
 
-@*<div id="container">
-    <div id="innercontainer">
-        <div class="front face">
-            front
-        </div>
-        <div class="back face">
-            back
-        </div>
-    </div>
-</div>*@
