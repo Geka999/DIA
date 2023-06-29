@@ -1,4 +1,5 @@
 ﻿<div ng-controller="diaController">
+
     <div ng-class="blur"></div>
     <div class="flex-row">
         <div class="diaLittle">
@@ -13,10 +14,16 @@
             <div class="card face">
 
                 <img class="edocHeader" src="~/pictures/edoc_header.png" />
-                <p class="edocOne">Дата народження:</p>
-                <p class="edocTwo">01.01.1999</p>
-                <p class="edocOne">РНОКПП:</p>
-                <p class="edocTwo">1255129865</p>
+                <div>
+                    <img class="mainPhoto" src="~/pictures/MainPhoto.jpg" />
+                    <div class="lefData">
+                        <p class="edocOne">Дата народження:</p>
+                        <p class="edocTwo">01.01.1999</p>
+                        <p class="edocOne">РНОКПП:</p>
+                        <p class="edocTwo">1255129865</p>
+                    </div>
+                </div>
+
                 <div>
                     <marquee behavior="scroll" direction="left">
                         Ой у лузі червона калина похилилася,
@@ -41,8 +48,9 @@
             </div>
         </div>
     </div>
-    <div class="expandCardPropery cardPropertyBottom" ng-style="cardPropertyHeight">        
-        <p class="cardTextProp">Повна iнформацiя</p>
+
+    <div class="expandCardPropery cardPropertyBottom" ng-style="cardPropertyHeight">
+        <p class="cardTextProp" ng-click="showCardProperty2()">Повна iнформацiя</p>
         <hr class="hrCenter" />
         <p class="cardTextProp">Код для перевiрки</p>
         <hr class="hrCenter" />
@@ -52,6 +60,74 @@
         <hr class="hrCenter" />
         <p class="cardTextProp" ng-click="showCardProperty($event)">X</p>
     </div>
+    <div class="expandCardPropery2 cardPropertyBottom2" ng-style="cardPropertyHeight2">
+        <hr class="hrCardPropery2" />
+        <div>
+            <img class="edocHeader2" src="~/pictures/edoc_header.png" />
+            <div class="cardTextPropX">
+                <span ng-click="showCardProperty2()">X</span>
+            </div>
+
+            <div class="ident2">
+                <p></p>
+                <span>Говерла</span><br />
+                <span>Півень</span><br />
+                <span>Бандерович</span><br />
+                <span class="nameSurnameSpan">Piven Goverla</span>
+            </div>
+            @*<div class="middleBold">
+            <span class="marginInfo1">Стать:</span>
+            <span class="marginInfo2">Ч</span><br/>
+            <span class="marginInfo1">Sex</span>
+            <span class="marginInfo2">M</span>
+            </div>*@
+            <table class="middleBold marginInfo1">
+                <tr>
+                    <th class="tableCellWidth">Стать:</th>
+                    <th>Ч</th>
+                </tr>
+                <tr>
+                    <td class="nameSurnameSpan">Sex</td>
+                    <td class="nameSurnameSpan">M</td>
+                </tr>
+            </table>
+            <table class="middleBold marginInfo1">
+                <tr>
+                    <th class="tableCellWidth">Дата Народження:</th>
+                    <th>01.03.2000</th>
+                </tr>
+                <tr>
+                    <td class="nameSurnameSpan">Day of birth</td>
+                    <td class="nameSurnameSpan"></td>
+                </tr>
+            </table>
+            <table class="middleBold marginInfo1">
+                <tr>
+                    <th class="tableCellWidth">Громадянство:</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td class="nameSurnameSpan">Naionality</td>
+                    <td class="nameSurnameSpan"></td>
+                </tr>
+            </table>
+            <table class="middleBold marginInfo1">
+                <tr>
+                    <th class="tableCellWidth">Документ, що <br/>посвідчує особу:</th>
+                    <th>Паспорт громадянина України</th>
+                </tr>
+            </table>
+            <table class="middleBold marginInfo1">
+                <tr>
+                    <th class="tableCellWidth">РНОКПП (ІПН):</th>
+                    <th>6665552223</th>
+                </tr>
+            </table>
+            <span class="middleBold marginBank">Місце проживання знзначене в банку:</span> <br />
+            <span class="middleBold marginBank">Гора говрла печера №5</span>
+        </div>
+    </div>
+    <div class="hideCardData"></div>
 
 </div>
 
