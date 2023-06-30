@@ -1,66 +1,409 @@
-﻿body {
-    background-color: #96BDEC;
-    overflow: hidden;
-}
+﻿@media (min-width:100px) {
+    body {
+        background-color: #96BDEC;
+        overflow: hidden;
+    }
 
-.card {
-    background-color: #96BDEC;
-    border:0px;
-}
+    .card {
+        background-color: #96BDEC;
+        border: 0px;
+    }
 
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    padding: 13px 5px;
-}
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+        padding: 13px 5px;
+    }
 
-.diaLittle {
-    width: 50px;
-    height: 50px;
-    border-radius: 11px;
-    margin: 13px;
-}
-
-    .diaLittle img {
+    .diaLittle {
         width: 50px;
         height: 50px;
+        border-radius: 11px;
+        margin: 13px;
     }
 
+        .diaLittle img {
+            width: 50px;
+            height: 50px;
+        }
 
 
-.qrTop {
-    float: left;
-    width: 25px;
-    height: 25px;
-    margin: 19px 13px 0px auto;
-}
 
-    .qrTop img {
+    .qrTop {
+        float: left;
         width: 25px;
         height: 25px;
+        margin: 19px 13px 0px auto;
     }
 
-.card1 {
-    width: auto;
-    height: 420px;
-    /*margin: 19px;*/
-    background-color: #FDF4A1;
-    border-radius: 7px;
-    font-size: 20px;
-    font-weight: bold;
-    /*padding: 20px 0 0 15px;*/
+        .qrTop img {
+            width: 25px;
+            height: 25px;
+        }
+
+    .card1 {
+        width: auto;
+        height: 420px;
+        /*margin: 19px;*/
+        background-color: #FDF4A1;
+        border-radius: 7px;
+        font-size: 20px;
+        font-weight: bold;
+        /*padding: 20px 0 0 15px;*/
+    }
+
+    .card2 {
+        width: auto;
+        height: 420px;
+        /*margin: 19px;*/
+        background-color: #FDF4A1;
+        border-radius: 7px;
+        font-size: 20px;
+        font-weight: bold;
+        /*padding: 20px 0 0 15px;*/
+    }
+
+    .card .edocHeader {
+        width: 196px;
+        height: 30px;
+        margin: 20px 0 0 15px;
+    }
+
+    .card marquee {
+        background: rgb(107,136,246);
+        background: linear-gradient(90deg, rgba(107,136,246,1) 0%, rgba(188,251,230,1) 35%);
+        font-weight: 500;
+        font-size: medium;
+        /*margin-top: 200px;*/
+        margin-top: 6%;
+    }
+
+    .ident {
+        margin: 0px 0 0 13px;
+        font-weight: 700;
+    }
+
+    .card .ident p {
+        margin: 0px;
+    }
+
+    .card .flex-row .ident p {
+    }
+
+    .edocOne {
+        margin: 20px 0px 0px 15px;
+        font-weight: 500;
+        font-size: medium;
+    }
+
+    .edocTwo {
+        margin: 0px 0px 0px 15px;
+        font-weight: 500;
+        font-size: medium;
+    }
+
+    .line {
+        margin-top:10px;
+    }
+
+    .cardBtn {
+        width: 30px;
+        height: 30px;
+        border: 2px solid;
+        margin: 17% 0 0 49%;
+        border-radius: 50px;
+        text-align: center;
+    }
+
+        .cardBtn p {
+            margin-top: -7px;
+        }
+
+
+    /*
+.slide-container {
+    max-width:1120px;
+    width:100%;
+    background-color:gray;
+    padding:40px 0px;
+    z-index:1;
+    position:relative;
+}*/
+
+    .container {
+        position: relative;
+        /*margin: 10px auto;*/
+        /*width: 450px;*/
+        /*height: 281px;*/
+        height: 637px;
+        z-index: 1;
+        /*margin: 19px;*/
+    }
+
+    .innercontainer {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: all 0.3s linear;
+    }
+
+    /*#container:hover #innercontainer {
+    transform: rotateY(180deg);
+    box-shadow: -5px 5px 5px #aaa;
+}*/
+    .rotate {
+        transform: rotateY(180deg);
+    }
+
+
+    .face {
+        position: absolute;
+        width: 100%;
+        height: 520px;
+        backface-visibility: hidden;
+    }
+
+        .face.back {
+            display: block;
+            transform: rotateY(180deg);
+            box-sizing: border-box;
+            /*padding: 10px;*/
+            /*color: white;*/
+            /*text-align: center;*/
+            /*background-color: blue;*/
+        }
+
+    .front {
+        /*background-color: red;*/
+    }
+
+    .qrImg {
+        margin: 39% 15%;
+        width: 70%;
+        height: 47%;
+    }
+
+    .mainPhoto {
+        /*float: left;*/
+        width: 48%;
+        padding: 20px 0px 0px 22px;
+    }
+
+    .infoMainCard {
+        margin-right: 40px;
+        float:right;
+    }
+
+    /*info block*/
+    .expandCardPropery {
+        /*width: 100px;*/
+        /*height: 100px;*/
+        background: white;
+        transition: all 0.2s linear;
+    }
+
+    .cardPropertyBottom {
+        position: absolute;
+        bottom: 0px;
+        margin: 0 2% 0 2%;
+        width: 96%;
+        height: 20%;
+        border-radius: 5px 5px 0 0;
+        z-index: 4;
+        text-align: center;
+    }
+    /*info block*/
+
+    /*info block details*/
+    .expandCardPropery2 {
+        /*width: 100px;*/
+        /*height: 100px;*/
+        background: #FDF4A1;
+        transition: all 0.2s linear;
+    }
+
+    .cardPropertyBottom2 {
+        position: absolute;
+        bottom: 0px;
+        margin: 0 2% 0 2%;
+        width: 96%;
+        height: 20%;
+        border-radius: 5px 5px 0 0;
+        float: left;
+    }
+    /*info blockdetails*/
+
+    .edocHeader2 {
+        float: left;
+        width: 196px;
+        height: 30px;
+        margin: 0px 0 0 15px;
+    }
+
+    .cardTextPropX {
+        font-weight: 600;
+        margin: 40px 0px 0px 322px;
+        border: 2px solid;
+        border-radius: 14px;
+        text-align: center;
+        width: 28px;
+        font: 600
+    }
+
+    .blur {
+        -webkit-backdrop-filter: blur(8px);
+        backdrop-filter: blur(8px);
+        background: rgba(255, 255, 255, 0.2);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+    }
+
+    
+
+    .noBlur {
+        background: none;
+        backdrop-filter: none;
+        height: 0%;
+        width: 0%;
+        z-index: 0;
+    }
+
+    .hrCenter {
+        width: 80%;
+        margin: 0 10% 0 10%;
+    }
+
+    .cardTextProp {
+        margin-top: 5%;
+        font-weight: 600;
+    }
+
+    .hrCardPropery2 {
+        width: 15%;
+        border: 2px solid black;
+        border-radius: 5px;
+        margin-left: 42.5%;
+    }
+
+    .nameSurnameSpan {
+        opacity: 0.6;
+        font-weight: 500;
+    }
+
+    .ident2 {
+        margin: 0px 0 0 13px;
+        font-weight: 900;
+    }
+
+    .middleBold {
+        font-weight: 600;
+    }
+
+    .marginTable1 {
+        border: 1px solid;
+        /*width:30px;*/
+    }
+
+    .marginInfo1 {
+        margin: 30px 0px 0px 13px;
+    }
+
+    .tableCellWidth {
+        width: 209px;
+    }
+
+    /*.marginInfo2 {
+    margin-left: 162px;
+}*/
+    /*table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}*/
+
+    .hideCardData {
+        height: 643px;
+        width: 100%;
+        z-index: 4;
+        position: absolute;
+        background-color: #96BDEC;
+        margin-top: 223px;
+    }
+
+    .marginBank {
+        margin-left: 13px;
+        font-weight: bold;
+    }
+
+   
 }
 
-.card2 {
-    width: auto;
-    height: 420px;
-    /*margin: 19px;*/
-    background-color: #FDF4A1;
-    border-radius: 7px;
-    font-size: 20px;
-    font-weight: bold;
-    /*padding: 20px 0 0 15px;*/
-}
+@media (min-width:600px) {
+    body {
+        background-color: #96BDEC;
+        overflow: hidden;
+        width:1300px;
+    }
+
+    .card {
+        background-color: #96BDEC;
+        border: 0px;
+    }
+
+    .flex-row {
+        display: flex;
+        flex-direction: row;
+        padding: 13px 5px;
+    }
+
+    .diaLittle {
+        width: 50px;
+        height: 50px;
+        border-radius: 11px;
+        margin: 13px;
+    }
+
+        .diaLittle img {
+            width: 50px;
+            height: 50px;
+        }
+
+
+
+    .qrTop {
+        float: left;
+        width: 25px;
+        height: 25px;
+        margin: 19px 13px 0px auto;
+    }
+
+        .qrTop img {
+            width: 25px;
+            height: 25px;
+        }
+
+    .card1 {
+        width: auto;
+        height: 420px;
+        /*margin: 19px;*/
+        background-color: #FDF4A1;
+        border-radius: 7px;
+        font-size: 20px;
+        font-weight: bold;
+        /*padding: 20px 0 0 15px;*/
+    }
+
+    .card2 {
+        width: auto;
+        height: 420px;
+        /*margin: 19px;*/
+        background-color: #FDF4A1;
+        border-radius: 7px;
+        font-size: 20px;
+        font-weight: bold;
+        /*padding: 20px 0 0 15px;*/
+    }
 
     .card .edocHeader {
         width: 196px;
@@ -77,253 +420,253 @@
         margin-top: 25%;
     }
 
-.ident {
-    margin: 0px 0 0 13px;
-    font-weight: 700;
-}
-
-.card .ident p {
-    margin: 0px;
-}
-
-.card .flex-row .ident p {
-}
-
-.edocOne {
-    margin: 20px 0px 0px 15px;
-    font-weight: 500;
-    font-size: medium;
-}
-
-.edocTwo {
-    margin: 0px 0px 0px 15px;
-    font-weight: 500;
-    font-size: medium;
-}
-
-.lefData {
-    float:left;
-}
-
-.cardBtn {
-    width: 30px;
-    height: 30px;
-    border: 2px solid;
-    margin: 17% 0 0 49%;
-    border-radius: 50px;
-    text-align: center;
-}
-
-    .cardBtn p {
-        margin-top: -7px;
+    .ident {
+        margin: 0px 0 0 13px;
+        font-weight: 700;
     }
 
+    .card .ident p {
+        margin: 0px;
+    }
 
-/*
+    .card .flex-row .ident p {
+    }
+
+    .edocOne {
+        margin: 20px 0px 0px 15px;
+        font-weight: 500;
+        font-size: medium;
+    }
+
+    .edocTwo {
+        margin: 0px 0px 0px 15px;
+        font-weight: 500;
+        font-size: medium;
+    }
+
+    .lefData {
+        float: left;
+    }
+
+    .cardBtn {
+        width: 30px;
+        height: 30px;
+        border: 2px solid;
+        margin: 17% 0 0 49%;
+        border-radius: 50px;
+        text-align: center;
+    }
+
+        .cardBtn p {
+            margin-top: -7px;
+        }
+
+
+/*    
 .slide-container {
-    max-width:1120px;
-    width:100%;
+    
+    width:400px;
     background-color:gray;
     padding:40px 0px;
     z-index:1;
     position:relative;
 }*/
 
-.container {
-    position: relative;
-    /*margin: 10px auto;*/
-    /*width: 450px;*/
-    /*height: 281px;*/
-    height: 637px;
-    z-index: 1;
-    /*margin: 19px;*/
-}
+    .container {
+        position: relative;
+        /*margin: 10px auto;*/
+        /*width: 450px;*/
+        /*height: 281px;*/
+        height: 637px;
+        z-index: 1;
+        /*margin: 19px;*/
+    }
 
-.innercontainer {
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: all 0.3s linear;
+    .innercontainer {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: all 0.3s linear;
+    }
 
-}
-
-/*#container:hover #innercontainer {
+    /*#container:hover #innercontainer {
     transform: rotateY(180deg);
     box-shadow: -5px 5px 5px #aaa;
 }*/
-.rotate {
-    transform: rotateY(180deg);
-}
-
-
-.face {
-    position: absolute;
-    width: 100%;
-    height: 520px;
-    backface-visibility: hidden;
-}
-
-    .face.back {
-        display: block;
+    .rotate {
         transform: rotateY(180deg);
-        box-sizing: border-box;
-        /*padding: 10px;*/
-        /*color: white;*/
-        /*text-align: center;*/
-        /*background-color: blue;*/
     }
 
-.front {
-    /*background-color: red;*/
-}
 
-.qrImg {
-    margin: 39% 15%;
-    width: 70%;
-    height: 47%;
-}
+    .face {
+        position: absolute;
+        width: 100%;
+        height: 520px;
+        backface-visibility: hidden;
+    }
 
-.mainPhoto {
-    float:left;
-    width:50%;
-    padding: 20px 0px 0px 22px;
-}
+        .face.back {
+            display: block;
+            transform: rotateY(180deg);
+            box-sizing: border-box;
+            /*padding: 10px;*/
+            /*color: white;*/
+            /*text-align: center;*/
+            /*background-color: blue;*/
+        }
 
-/*info block*/
-.expandCardPropery {
-    /*width: 100px;*/
-    /*height: 100px;*/
-    background: white;
-    transition: all 0.2s linear;
-}
+    .front {
+        /*background-color: red;*/
+    }
 
-.cardPropertyBottom {
-    position: absolute;
-    bottom: 0px;    
-    margin: 0 2% 0 2%;
-    width: 96%;
-    height: 20%;
-    border-radius: 5px 5px 0 0;
-    z-index:4;
-    text-align:center;
-}
-/*info block*/
+    .qrImg {
+        margin: 39% 15%;
+        width: 70%;
+        height: 47%;
+    }
 
-/*info block details*/
-.expandCardPropery2 {
-    /*width: 100px;*/
-    /*height: 100px;*/
-    background: #FDF4A1;
-    transition: all 0.2s linear;
-}
+    .mainPhoto {
+        float: left;
+        width: 169px;
+        padding: 20px 0px 0px 22px;
+    }
 
-.cardPropertyBottom2{
-    position: absolute;
-    bottom: 0px;    
-    margin: 0 2% 0 2%;
-    width: 96%;
-    height: 20%;
-    border-radius: 5px 5px 0 0;    
-    float:left;
-}
-/*info blockdetails*/
+    /*info block*/
+    .expandCardPropery {
+        /*width: 100px;*/
+        /*height: 100px;*/
+        background: white;
+        transition: all 0.2s linear;
+    }
 
-.edocHeader2 {
-    float:left;
-    width: 196px;
-    height: 30px;
-    margin: 0px 0 0 15px;
-}
+    .cardPropertyBottom {
+        position: absolute;
+        bottom: 0px;
+        margin: 0 2% 0 2%;
+        width: 96%;
+        height: 20%;
+        border-radius: 5px 5px 0 0;
+        z-index: 4;
+        text-align: center;
+    }
+    /*info block*/
 
-.cardTextPropX {
-    font-weight: 600;
-    margin:40px 0px 0px 322px;
-    border:2px solid;
-    border-radius:14px;
-    text-align:center;
-    width:28px;
-    font:600
-}
+    /*info block details*/
+    .expandCardPropery2 {
+        /*width: 100px;*/
+        /*height: 100px;*/
+        background: #FDF4A1;
+        transition: all 0.2s linear;
+    }
 
-.blur {
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-}
+    .cardPropertyBottom2 {
+        position: absolute;
+        bottom: 0px;
+        margin: 0 2% 0 2%;
+        width: 96%;
+        height: 20%;
+        border-radius: 5px 5px 0 0;
+        float: left;
+    }
+    /*info blockdetails*/
 
-.noBlur {
-    background: none;
-    backdrop-filter: none;
-    height: 0%;
-    width: 0%;
-    z-index:0;
-}
+    .edocHeader2 {
+        float: left;
+        width: 196px;
+        height: 30px;
+        margin: 0px 0 0 15px;
+    }
 
-.hrCenter {
-    width: 80%;
-    margin:0 10% 0 10%;
-}
+    .cardTextPropX {
+        font-weight: 600;
+        margin: 40px 0px 0px 322px;
+        border: 2px solid;
+        border-radius: 14px;
+        text-align: center;
+        width: 28px;
+        font: 600
+    }
 
-.cardTextProp {
-    margin-top: 5%;
-    font-weight:600;
-}
+    .blur {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(8px);
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+    }
 
-.hrCardPropery2 {
-    width: 15%;
-    border: 2px solid black;
-    border-radius:5px;
-    margin-left:42.5%;
-}
+    .noBlur {
+        background: none;
+        backdrop-filter: none;
+        height: 0%;
+        width: 0%;
+        z-index: 0;
+    }
 
-.nameSurnameSpan {
-    opacity: 0.6;
-    font-weight:500;
-}
+    .hrCenter {
+        width: 80%;
+        margin: 0 10% 0 10%;
+    }
 
-.ident2 {
-    margin: 0px 0 0 13px;
-    font-weight: 900;
-}
+    .cardTextProp {
+        margin-top: 5%;
+        font-weight: 600;
+    }
 
-.middleBold {
-    font-weight: 600;
-}
+    .hrCardPropery2 {
+        width: 15%;
+        border: 2px solid black;
+        border-radius: 5px;
+        margin-left: 42.5%;
+    }
 
-.marginTable1 {
-    border: 1px solid;
-    /*width:30px;*/
-}
+    .nameSurnameSpan {
+        opacity: 0.6;
+        font-weight: 500;
+    }
 
-.marginInfo1 {
-    margin:30px 0px 0px 13px;
-}
+    .ident2 {
+        margin: 0px 0 0 13px;
+        font-weight: 900;
+    }
 
-.tableCellWidth {
-    width:209px;
-}
+    .middleBold {
+        font-weight: 600;
+    }
 
-/*.marginInfo2 {
+    .marginTable1 {
+        border: 1px solid;
+        /*width:30px;*/
+    }
+
+    .marginInfo1 {
+        margin: 30px 0px 0px 13px;
+    }
+
+    .tableCellWidth {
+        width: 209px;
+    }
+
+    /*.marginInfo2 {
     margin-left: 162px;
 }*/
-/*table, th, td {
+    /*table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
 }*/
 
-.hideCardData {
-    height:643px;
-    width:100%;
-    z-index:4;
-    position:absolute;
-    background-color:#96BDEC;
-    margin-top:223px;
-}
+    .hideCardData {
+        height: 643px;
+        width: 100%;
+        z-index: 4;
+        position: absolute;
+        background-color: #96BDEC;
+        margin-top: 223px;
+    }
 
-.marginBank {
-    margin-left:13px;
-    font-weight:bold;
+    .marginBank {
+        margin-left: 13px;
+        font-weight: bold;
+    }
 }

@@ -26,20 +26,20 @@ dApp.controller("diaController", function ($scope) {
         event.preventDefault();
         event.stopPropagation();
 
-        if ($scope.cardPropertyHeight.height === "300px") {
+        if ($scope.cardPropertyHeight.height === "42%") {
             $scope.cardPropertyHeight.height = "0px";
             $scope.blur = "noBlur";
             //$scope.cardPropertyHeight.display = "none"
         }
         else {
-            $scope.cardPropertyHeight.height = "300px";
+            $scope.cardPropertyHeight.height = "42%";
             $scope.blur = "blur";
             $scope.cardPropertyHeight.display = ""
         }
     };
 
     $scope.showCardProperty2 = function (event) {
-        if ($scope.cardPropertyHeight2.height === "763px") {
+        if ($scope.cardPropertyHeight2.height === "89%") {
             $scope.cardPropertyHeight2.height = "0px";
             $scope.cardPropertyHeight.height = "0px";
             //$scope.cardPropertyHeight.display = "none"
@@ -47,7 +47,7 @@ dApp.controller("diaController", function ($scope) {
             $scope.blur = "noBlur";
         }
         else {
-            $scope.cardPropertyHeight2.height = "763px";
+            $scope.cardPropertyHeight2.height = "89%";
             $scope.cardPropertyHeight2.display = "block"
             $scope.cardPropertyHeight2['z-index'] = "5";
         }
